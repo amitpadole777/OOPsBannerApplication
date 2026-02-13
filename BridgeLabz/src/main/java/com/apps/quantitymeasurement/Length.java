@@ -7,21 +7,6 @@ public class Length {
     private double value;
     private LengthUnit unit;
 
-    public enum LengthUnit{
-        FEET(12.0),INCHES(1.0), YARD(36), CM(0.393701);
-
-        private final double conversionFactor;
-
-        //constructor
-        LengthUnit(double conversionFactor) {
-            this.conversionFactor = conversionFactor;
-        }
-
-        public double getConversionFactor() {
-            return conversionFactor;
-        }
-    }
-
     // constructor
     public Length(double value, LengthUnit unit) {
         this.value = value;
@@ -47,7 +32,7 @@ public class Length {
         double baseValue = value1 + value2;
 
         // convert base unit to the given unit provided
-        double convertedBaseValue = baseValue/targetUnit.conversionFactor;
+        double convertedBaseValue = baseValue/targetUnit.getConversionFactor();
 
         // keep values up to three decimals only
         DecimalFormat df = new DecimalFormat("#.###");
@@ -72,7 +57,7 @@ public class Length {
         double baseValue = value1 + value2;
 
         // convert base unit to the first unit provided
-        double convertedBaseValue = baseValue/this.unit.conversionFactor;
+        double convertedBaseValue = baseValue/this.unit.getConversionFactor();
 
         // keep values up to three decimals only
         DecimalFormat df = new DecimalFormat("#.###");
