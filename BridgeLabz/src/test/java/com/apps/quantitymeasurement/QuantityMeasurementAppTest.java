@@ -930,7 +930,7 @@ public class QuantityMeasurementAppTest {
 
     // 13
     @Test
-    public void testQuantityLengthRefractored_Equality
+    public void testQuantityLengthRefactored_Equality
             (){
         Length length1 = new Length(1.0, LengthUnit.FEET);
         Length length2 = new Length(12.0, LengthUnit.INCHES);
@@ -941,7 +941,7 @@ public class QuantityMeasurementAppTest {
 
     // 14
     @Test
-    public void testQuantityLengthRefractored_ConvertTo
+    public void testQuantityLengthRefactored_ConvertTo
             () throws MyException {
 
         double actualResult = convert(1.0, LengthUnit.FEET, LengthUnit.INCHES);
@@ -951,7 +951,7 @@ public class QuantityMeasurementAppTest {
 
     // 15
     @Test
-    public void testQuantityLengthRefractored_add
+    public void testQuantityLengthRefactored_add
             () throws MyException {
 
         Length length1 = new Length(1.0, LengthUnit.FEET);
@@ -964,7 +964,7 @@ public class QuantityMeasurementAppTest {
 
     // 16
     @Test
-    public void testQuantityLengthRefractored_AddWithTargetUnit
+    public void testQuantityLengthRefactored_AddWithTargetUnit
             () throws MyException {
         Length length1 = new Length(1.0, LengthUnit.FEET);
         Length length2 = new Length(12.0, LengthUnit.INCHES);
@@ -990,7 +990,7 @@ public class QuantityMeasurementAppTest {
 
     // 18
     @Test
-    public void testQuantityLengthRefractored_InvalidValue
+    public void testQuantityLengthRefactored_InvalidValue
 
             () throws MyException {
         MyException exception = assertThrows(MyException.class, () -> {
