@@ -2,12 +2,12 @@ package com.apps.quantitymeasurement;
 
 import java.text.DecimalFormat;
 
-public enum LengthUnit{
-        FEET(12.0),INCHES(1.0), YARD(36), CM(0.393701);
+public enum WeightUnit{
+        GRAM(0.001),KG(1.0), POUND(0.453592);
         private final double conversionFactor;
 
         //constructor
-        LengthUnit(double conversionFactor) {
+        WeightUnit(double conversionFactor) {
             this.conversionFactor = conversionFactor;
         }
 
@@ -34,5 +34,13 @@ public enum LengthUnit{
                 value = Double.parseDouble(df.format(value));
 
                 return  value;
+        }
+
+
+        public static void main(String[] args) {
+
+                double kilograms = 10.0;
+                double grams = WeightUnit.KG.convertToBaseUnit(kilograms);
+                System.out.println("Kilogram: " + kilograms + " Gram: " + grams);
         }
 }

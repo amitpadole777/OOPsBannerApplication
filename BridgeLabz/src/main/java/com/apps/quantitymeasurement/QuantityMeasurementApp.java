@@ -2,14 +2,15 @@ package com.apps.quantitymeasurement;
 
 public class QuantityMeasurementApp {
 
-    public static Length demonstrateLengthAddition(Length length1, Length length2, LengthUnit targetUnit) throws MyException {
-        return length1.add(length2, targetUnit);
+    public static boolean demonstrateWeightEquality(Weight weight1, Weight weight2) throws MyException {
+        return weight1.equals(weight2);
     }
 
     public static void main(String[] args) throws MyException {
-        Length length1 = new Length(2.0, LengthUnit.FEET);
-        Length length2 = new Length(1.0, LengthUnit.FEET);
-        Length length3 = demonstrateLengthAddition(length1, length2, LengthUnit.FEET);
-        System.out.println(length3.equals(new Length(3.0, LengthUnit.FEET)));
+
+        Weight weight1 = new Weight(1.0, WeightUnit.KG);
+        Weight weight2 = new Weight(1.0, WeightUnit.KG);
+        System.out.println(demonstrateWeightEquality(weight1,weight2));
+
     }
 }
